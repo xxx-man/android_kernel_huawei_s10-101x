@@ -1,0 +1,7 @@
+on swapfile_create
+    class_start swapfile_create
+service create_swapfile /system/bin/sh /system/etc/memsave.sh
+    class swapfile_create
+    user root
+    group root
+    oneshot
